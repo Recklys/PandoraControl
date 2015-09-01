@@ -1,13 +1,13 @@
 # PandoraControl
-Automation service for Pandora's web UI
+Automation service for Pandora's web UI in Chrome
 
-Super simple OS X automation service for play/pause of Pandora's Web UI in Chrome.
+Play/pause Pandora in Chrome inside any app!
 
 To install:
-(1) Add this service to ~/Library/Services
-(2) Set the service to any hotkey you'd like in System Preferences->Keyboard->Services
-(3) Open Pandora in Chrome.  Use your hotkey to play/pause in any app!
+* Add this service to ~/Library/Services
+* Set the service to any hotkey you'd like in System Preferences->Keyboard->Services
+* Open Pandora in Chrome.  Use your hotkey to play/pause in any app!
 
 Further improvements:
-(1) Support other browsers
-(2) Allow other controls
+* Support other browsers
+* Allow other controls
