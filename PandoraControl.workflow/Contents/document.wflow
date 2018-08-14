@@ -51,21 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>function run(input, parameters) {		var system = Application('System Events');	var app = Application.currentApplication();	app.includeStandardAdditions = true;		if (system.exists('Google Chrome')) {	  var chrome = Application('Google Chrome');	  var windows = chrome.windows;	  var pandoraTab;
-	  var siriusTab;	  	  for (var i = 0; i &lt; windows.length; i++) {	   	var pandoraTabs = windows[i].tabs.whose({		  title: { _contains: 'Pandora Internet Radio' }	  	});		if (pandoraTabs.length) pandoraTab = pandoraTabs[0];
-		
-		var siriusTabs = windows[i].tabs.whose({
-		  title: { _contains: 'SiriusXM Streaming' }
-		});
-		
-		if (siriusTabs.length) siriusTab = siriusTabs[0];	  }	  if (pandoraTab) {
-	  	pandoraTab.execute({		  javascript: "document.getElementsByClassName('PlayButton')[0].click();"		});
-		app.displayNotification('Pandora was paused', { withTitle: 'Success' });	  }
-	  else if (siriusTab) {
-	    siriusTab.execute({		  javascript: "document.getElementsByClassName('play-pause-btn')[0].click();"		});
-		app.displayNotification('SiriusXM was paused', { withTitle: 'Success' });
-	  }	  else {
-	    app.displayNotification('Unable to find Pandora or SiriusXM in Chrome', { withTitle: 'Error' });	  }	}}</string>
+					<string>function run(input, parameters) {		var system = Application('System Events');	var app = Application.currentApplication();	app.includeStandardAdditions = true;		if (system.exists('Google Chrome')) {	  var chrome = Application('Google Chrome');	  var windows = chrome.windows;	  var pandoraTab;	  var siriusTab;	  	  for (var i = 0; i &lt; windows.length; i++) {	   	var pandoraTabs = windows[i].tabs.whose({		  title: { _contains: 'Pandora' }	  	});		if (pandoraTabs.length) pandoraTab = pandoraTabs[0];				var siriusTabs = windows[i].tabs.whose({		  title: { _contains: 'SiriusXM Streaming' }		});				if (siriusTabs.length) siriusTab = siriusTabs[0];	  }	  if (pandoraTab) {	  	pandoraTab.execute({		  javascript: "document.getElementsByClassName('PlayButton')[0].click();"		});		app.displayNotification('Pandora was paused', { withTitle: 'Success' });	  }	  else if (siriusTab) {	    siriusTab.execute({		  javascript: "document.getElementsByClassName('play-pause-btn')[0].click();"		});		app.displayNotification('SiriusXM was paused', { withTitle: 'Success' });	  }	  else {	    app.displayNotification('Unable to find Pandora or SiriusXM in Chrome', { withTitle: 'Error' });	  }	}}</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunJavaScript</string>
@@ -120,7 +106,7 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>652.500000:575.000000</string>
+				<string>657.000000:316.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run JavaScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
